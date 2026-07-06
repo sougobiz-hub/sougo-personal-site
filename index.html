@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>そうご｜自分の型ch ─ "自分の強み"で、替えのきかない自分になる</title>
+<meta name="description" content="自己理解と強みを起点に、営業・独自ポジションづくり・集客を支援。あなたが"あなたのまま"で成果を出せるように伴走します。">
+
+<!-- ============================================================
+  ▼ 差し替え箇所
+  1) 無料相談ボタン → href="https://timerex.example/REPLACE"（TimeRex予約URL）
+  2) ストレングスセールス「詳しく見る」→ href="https://lp.example/REPLACE"（LP）
+  3) 写真 → .photo / .pic 内「写真をここに」を <img> に
+  4) 運営者・連絡先・ポリシー → フッター
+  ※ X / note / YouTube / LINE は実URL設定済み。Instagramは準備中。
+  ※ v3：配色をダークネイビー＋アイスブルー＋ゴールドに変更。
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0E1830;            /* 外側（ダークネイビー） */
+    --paper:#16213F;         /* 主セクション（ネイビー） */
+    --paper-2:#1C2A4A;       /* やや明るいネイビー */
+    --soft:#1A2747;          /* やわらかい面 */
+    --soft-accent:#22335C;   /* ゴールド寄りの面 */
+    --ink:#EAF1FB;           /* 明るいアイスホワイト文字 */
+    --ink-soft:#93A6C2;      /* 補助文字（青灰） */
+    --accent:#F0C869;        /* ゴールド（主） */
+    --accent-deep:#D9A853;
+    --accent-soft:#3A4E7A;   /* 写真枠などの控えめな青 */
+    --sage:#4FC3F7;          /* アイスブルー（副・明るめ） */
+    --line:#28345A;          /* やわらかい境界（濃紺） */
+    --g:#5FC98D; --b:#4FC3F7; --r:#F27878; --y:#F0C869; /* 4色 */
+    --maxw:600px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);
+    line-height:1.9;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;background:var(--paper);overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,.5)}
+  .en{font-family:'Bricolage Grotesque',sans-serif}
+  a{color:inherit}
+
+  /* header */
+  .hd{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 18px;background:rgba(14,24,48,.85);backdrop-filter:blur(8px);color:var(--ink);
+    border-bottom:1px solid var(--line)}
+  .hd .logo{font-weight:900;font-size:15px}
+  .hd .logo span{color:var(--sage);font-size:12px;font-weight:700}
+  .hd .mini{background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:var(--paper);text-decoration:none;font-weight:800;font-size:13px;
+    padding:9px 15px;border-radius:10px}
+
+  /* hero（ダークネイビー×アイスブルー×ゴールドの光） */
+  .hero{position:relative;color:var(--ink);padding:56px 26px 52px;text-align:center;
+    background:radial-gradient(120% 90% at 82% 0%,rgba(79,195,247,.20),transparent 60%),
+      radial-gradient(110% 80% at 0% 100%,rgba(240,200,105,.14),transparent 58%),
+      linear-gradient(170deg,var(--paper),var(--bg))}
+  .hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--sage),var(--accent))}
+  .dots{display:flex;gap:7px;justify-content:center;margin-bottom:20px}
+  .dots i{width:9px;height:9px;border-radius:50%;display:block;opacity:.9}
+  .dots i:nth-child(1){background:var(--g)}.dots i:nth-child(2){background:var(--b)}
+  .dots i:nth-child(3){background:var(--r)}.dots i:nth-child(4){background:var(--y)}
+  .hero h1{font-size:clamp(27px,7.4vw,36px);font-weight:900;line-height:1.5}
+  .hero h1 .accent{color:var(--accent)}
+  .hero .sub{margin-top:18px;font-size:15px;color:var(--ink-soft);line-height:2}
+  .photo{width:116px;height:116px;border-radius:50%;margin:28px auto 0;
+    border:3px solid var(--sage);background:var(--paper-2);
+    box-shadow:0 0 22px rgba(79,195,247,.35),0 0 34px rgba(240,200,105,.15);
+    display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:12px;text-align:center;overflow:hidden}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+  /* buttons */
+  .cta{display:block;width:100%;max-width:360px;margin:24px auto 0;
+    background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:var(--paper);
+    text-decoration:none;text-align:center;font-weight:800;font-size:16.5px;padding:16px 20px;border-radius:14px;
+    box-shadow:0 8px 20px rgba(240,200,105,.22);transition:transform .15s,box-shadow .15s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(240,200,105,.32)}
+  .cta small{display:block;font-weight:600;font-size:11.5px;color:rgba(22,33,63,.75);margin-top:3px}
+
+  /* sections */
+  section{padding:52px 26px}
+  .light{background:var(--paper)} .light-2{background:var(--paper-2)}
+  .label{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:.18em;font-size:12px;
+    color:var(--sage);text-transform:uppercase;margin-bottom:14px;text-align:center}
+  h2{font-size:clamp(20px,5.2vw,24px);font-weight:900;line-height:1.6;text-align:center;color:var(--ink)}
+  .lead{margin-top:16px;font-size:15px;color:var(--ink-soft);text-align:center}
+
+  /* 想い */
+  .mission{background:var(--soft)}
+  .mission p{font-size:15px;color:var(--ink);text-align:center;margin-bottom:14px}
+  .mission .big{font-size:18px;font-weight:900}
+  .mission .u{background:linear-gradient(transparent 62%,rgba(240,200,105,.32) 62%)}
+
+  /* services */
+  .svc{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .15s,box-shadow .15s}
+  .svc:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
+  .svc.flag{border-color:var(--accent);background:var(--soft-accent)}
+  .svc h3{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .svc h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sage)}
+  .svc.flag h3::before{background:var(--accent)}
+  .svc .who{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:8px}
+  .svc p{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+  .svc .acts{display:flex;flex-wrap:wrap;gap:10px}
+  .svc .b1{background:transparent;color:var(--accent);border:1.5px solid var(--accent);
+    text-decoration:none;font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:10px}
+  .svc .b2{background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:var(--paper);text-decoration:none;font-weight:800;font-size:13.5px;padding:10px 16px;border-radius:10px}
+
+  /* profile（やわらかい面に） */
+  .profile{background:var(--soft)}
+  .profile .label{color:var(--sage)}
+  .pic{width:96px;height:96px;border-radius:50%;margin:0 auto 16px;border:3px solid var(--sage);
+    background:var(--paper-2);box-shadow:0 0 18px rgba(79,195,247,.3);
+    display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:12px;text-align:center;overflow:hidden}
+  .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+  .profile .name{text-align:center;font-weight:900;font-size:17px;margin-bottom:20px;color:var(--ink)}
+  .profile .name span{display:block;color:var(--sage);font-size:12px;font-weight:700;margin-top:2px}
+  .profile p{font-size:14.5px;color:var(--ink);margin-bottom:15px}
+  .profile .punch{text-align:center;font-weight:900;font-size:16px;color:var(--accent);margin-top:6px}
+
+  /* sns */
+  .sns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+  .sns a{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);
+    border-radius:12px;padding:12px 18px;text-decoration:none;font-weight:700;font-size:14px;color:var(--ink);
+    transition:transform .12s,border-color .12s}
+  .sns a:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .sns a.line{background:#06C755;color:#fff;border-color:#06C755}
+  .sns .soon{opacity:.5;background:var(--paper);cursor:default}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--sage)}
+
+  /* final（ゴールド寄りのネイビー面に） */
+  .final{background:var(--soft-accent);text-align:center}
+  .final h2{color:var(--ink)} .final p{margin-top:14px;color:var(--ink-soft);font-size:14.5px}
+
+  /* contact */
+  .contact{text-align:center}
+  .contact .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
+  .contact .row a{text-decoration:none;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;border:1px solid var(--line);color:var(--ink);background:var(--paper-2)}
+
+  footer{background:var(--soft);color:var(--ink-soft);text-align:center;padding:30px 26px 36px;font-size:12px;line-height:2;border-top:1px solid var(--line)}
+  footer a{color:var(--accent);text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(16px);animation:rise .7s ease forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.32s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ヘッダー -->
+  <div class="hd">
+    <div class="logo">そうご<span>｜自分の型ch</span></div>
+    <a class="mini" href="https://timerex.example/REPLACE">無料相談</a>
+  </div>
+
+  <!-- ① ヒーロー -->
+  <header class="hero">
+    <div class="dots reveal d1"><i></i><i></i><i></i><i></i></div>
+    <h1 class="reveal d1">"自分の強み"で、<br><span class="accent">替えのきかない自分</span>になる。</h1>
+    <p class="sub reveal d2">自己理解を起点に、営業・独自ポジションづくり・集客を支援。<br>あなたが"あなたのまま"で成果を出せるように、伴走します。</p>
+    <div class="photo reveal d3"><img src="profile.jpg" alt="そうご"></div>
+    <a class="cta reveal d3" href="https://timerex.example/REPLACE">無料相談を申し込む</a>
+  </header>
+
+  <!-- ② 想い・軸 -->
+  <section class="mission">
+    <div class="label">想い</div>
+    <p class="big">「替えのきく自分」から、<span class="u">抜け出す。</span></p>
+    <p>かつての僕は、自分の仕事を「替えのきく仕事だ」と感じていました。<br>でも、自分の強みを知り、それを軸に働き方を変えたとき、世界は変わりました。</p>
+    <p>だから僕は、自己理解と強みを起点に、あなたが"あなたのまま"で成果を出せるよう支援します。売ることも、立ち位置をつくることも、価値を届けることも──すべては「替えのきかない自分」になるために。</p>
+  </section>
+
+  <!-- ③ サービス -->
+  <section class="light-2">
+    <div class="label">サービス</div>
+    <h2>3つの入り口から、<br>あなたの「自分の型」をつくる。</h2>
+
+    <div class="svc flag">
+      <h3>ストレングスセールス</h3>
+      <div class="who">営業未経験〜駆け出しで、成果が出ずに悩んでいる人へ</div>
+      <p>あなたの強みに合った"売り込まない"営業の型を、3ヶ月の1on1で一緒に作ります。</p>
+      <div class="acts">
+        <a class="b1" href="lp.html">詳しく見る</a>
+        <a class="b2" href="https://timerex.example/REPLACE">無料相談</a>
+      </div>
+    </div>
+
+    <div class="svc">
+      <h3>独自ポジション・プロデュース</h3>
+      <div class="who">「替えのきかない存在になりたい」／自分が何者かに不安がある人へ</div>
+      <p>あなたにしかない強み・経験・価値観を編集し、唯一無二のポジションを一緒に設計します。</p>
+      <div class="acts"><a class="b2" href="https://timerex.example/REPLACE">無料相談</a></div>
+    </div>
+
+    <div class="svc">
+      <h3>LP制作代行（仮称）</h3>
+      <div class="who">いい商品はあるのに、集客や伝え方で止まっている人へ</div>
+      <p>あなたの商品の価値が伝わるLPを、強みや想いごと言語化して形にします。</p>
+      <div class="acts"><a class="b2" href="https://timerex.example/REPLACE">無料相談</a></div>
+    </div>
+  </section>
+
+  <!-- ④ プロフィール -->
+  <section class="profile">
+    <div class="label">プロフィール</div>
+    <div class="pic"><img src="profile.jpg" alt="そうご"></div>
+    <p class="name">そうご<span>自分の型ch</span></p>
+    <p>かつての僕は、年功序列の大手企業で働く会社員でした。安定しているように見えて、収入には限界が見え、何より「この仕事は、自分じゃなくてもいい。替えのきく仕事だ」と感じていました。本当の安定は、会社ではなく"自分のスキル"の中にしかない──そう思うようになりました。</p>
+    <p>決定的だったのは、妻の妊娠です。子どもが生まれると分かったとき、自問しました。「自分は、子どもに誇れる生き方をしているか。かっこいい父親になれるのか」と。やりがいのない仕事に耐える姿も、そのせいで家族との時間が持てないことも、帰宅して妻に職場の愚痴をこぼす自分も、どれも理想とは程遠かった。今の延長線上に、自分が望む幸せはない──そう悟りました。</p>
+    <p>そこから自己理解と向き合い、八木仁平さんの自己理解メソッドを学び、自己理解コーチとして500人以上の「強み」をサポートしてきました。自分自身が苦しんだ営業も、自分の強みに合うやり方に変えて乗り越えました。</p>
+    <p class="punch">だから今、「替えのきかない自分でありたい」と願う人を、全力で支えています。</p>
+  </section>
+
+  <!-- ⑤ 発信・SNS -->
+  <section class="light">
+    <div class="label">発信</div>
+    <h2>考え方や実践は、<br>SNSでも届けています。</h2>
+    <div class="sns">
+      <a href="https://x.com/Gengoka_sougo" target="_blank" rel="noopener"><span class="dot"></span>X</a>
+      <a href="https://note.com/gifted_potential" target="_blank" rel="noopener"><span class="dot"></span>note</a>
+      <a href="https://www.youtube.com/@jibun-no-kata" target="_blank" rel="noopener"><span class="dot"></span>YouTube</a>
+      <a class="line" href="https://s.lmes.jp/landing-qr/2009973869-ZmAFu08m?uLand=cNVtUl" target="_blank" rel="noopener">公式LINEを追加</a>
+      <a class="soon">Instagram（準備中）</a>
+    </div>
+  </section>
+
+  <!-- ⑥ 無料相談CTA -->
+  <section class="final">
+    <h2>まずは、話してみませんか。</h2>
+    <p>どのサービスが合うか分からなくても大丈夫。<br>あなたの今に合わせて、一緒に考えます。</p>
+    <a class="cta" href="https://timerex.example/REPLACE">無料相談を申し込む<small>オンライン・60分／売り込みはしません</small></a>
+  </section>
+
+  <!-- ⑦ お問い合わせ -->
+  <section class="light-2 contact">
+    <div class="label">お問い合わせ</div>
+    <p class="lead">ご相談・お仕事のご依頼はこちらから。</p>
+    <div class="row">
+      <a href="mailto:REPLACE@example.com">メールで問い合わせ</a>
+      <a href="https://s.lmes.jp/landing-qr/2009973869-ZmAFu08m?uLand=cNVtUl" target="_blank" rel="noopener">公式LINEで問い合わせ</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    そうご｜自分の型ch<br>
+    運営者：（氏名 or 屋号）／連絡先：（　）<br>
+    <a href="#">プライバシーポリシー</a>｜<a href="#">特定商取引法に基づく表記</a>
+  </footer>
+
+</div>
+</body>
+</html>

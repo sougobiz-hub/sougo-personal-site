@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>売り込まないのに、売れる。｜自分の型ch（無料2点セット）</title>
+
+<!-- ============================================================
+  ▼ 仕上げ用メモ（あとで差し替える箇所）
+  1) LINE友だち追加URL → 本文中の href="https://lin.ee/REPLACE_ME" を全部置換（CTAボタン3か所）
+  2) あなたの写真 → .photo の中の「写真をここに」を <img> に差し替え
+  3) Metaピクセル → 下の <!-- META PIXEL --> 部分に発行コードを貼る
+  4) プライバシーポリシー/運営者 → フッターのリンク・氏名を差し替え
+============================================================ -->
+
+<!-- META PIXEL（ここに Meta のピクセルコードを貼る） -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#283848; --navy-deep:#1E2E3E; --navy-darker:#15212C;
+    --teal:#2C8C7C; --teal-light:#3AAFA9;
+    --gold:#F0C040; --gold-deep:#D9A82B;
+    --paper:#F7F4EE; --paper-2:#FFFFFF;
+    --ink:#26333F; --ink-soft:#52606C;
+    --g:#4CAF7D; --b:#1976D2; --r:#E85D5D; --y:#F0C040;
+    --maxw:560px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--ink); background:var(--navy-darker);
+    line-height:1.85; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;background:var(--paper);overflow:hidden;
+        box-shadow:0 0 80px rgba(0,0,0,.4)}
+  .en{font-family:'Bricolage Grotesque',sans-serif}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative; color:#fff; padding:64px 26px 56px; text-align:center;
+    background:
+      radial-gradient(120% 90% at 80% 0%, rgba(58,175,169,.30), transparent 60%),
+      radial-gradient(100% 80% at 0% 100%, rgba(240,192,64,.14), transparent 55%),
+      linear-gradient(165deg,var(--navy-deep),var(--navy-darker));
+  }
+  .hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--teal),var(--teal-light),var(--gold))}
+  .dots{display:flex;gap:7px;justify-content:center;margin-bottom:22px}
+  .dots i{width:9px;height:9px;border-radius:50%;display:block}
+  .dots i:nth-child(1){background:var(--g)} .dots i:nth-child(2){background:var(--b)}
+  .dots i:nth-child(3){background:var(--r)} .dots i:nth-child(4){background:var(--y)}
+  .hero h1{font-size:clamp(30px,8.5vw,40px);font-weight:900;line-height:1.4;letter-spacing:.01em}
+  .hero h1 .gold{color:var(--gold)}
+  .hero .sub{margin-top:18px;font-size:15.5px;color:rgba(255,255,255,.82);line-height:2}
+  .hero .photo{
+    width:118px;height:118px;border-radius:50%;margin:30px auto 0;
+    border:3px solid rgba(58,175,169,.5);
+    background:rgba(255,255,255,.06);
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.4);font-size:12px;text-align:center;overflow:hidden;
+  }
+  .hero .photo img{width:100%;height:100%;object-fit:cover}
+  .trust{margin-top:16px;font-size:12px;color:var(--teal-light);font-weight:700;letter-spacing:.02em}
+
+  /* ===== Buttons ===== */
+  .cta{
+    display:block;width:100%;max-width:380px;margin:26px auto 0;
+    background:linear-gradient(180deg,var(--gold),var(--gold-deep));
+    color:#23303b;text-decoration:none;text-align:center;
+    font-weight:900;font-size:17px;padding:17px 20px;border-radius:14px;
+    box-shadow:0 10px 24px rgba(240,192,64,.28);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(240,192,64,.4)}
+  .cta small{display:block;font-weight:700;font-size:11.5px;color:#3a4651;margin-top:4px;letter-spacing:.02em}
+
+  /* ===== Sections ===== */
+  section{padding:54px 26px}
+  .light{background:var(--paper)}
+  .light-2{background:var(--paper-2)}
+  .label{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:.18em;
+    font-size:12px;color:var(--teal);text-transform:uppercase;margin-bottom:14px;text-align:center}
+  h2{font-size:clamp(21px,5.5vw,25px);font-weight:900;line-height:1.55;text-align:center;color:var(--navy-deep)}
+  .lead{margin-top:18px;font-size:15.5px;color:var(--ink-soft);text-align:center}
+
+  /* 共感 list */
+  .pains{list-style:none;margin:24px auto 0;max-width:420px}
+  .pains li{position:relative;padding:12px 14px 12px 44px;margin-bottom:10px;
+    background:#fff;border:1px solid #ece6da;border-radius:12px;font-size:14.5px;color:var(--ink)}
+  .pains li::before{content:"✓";position:absolute;left:15px;top:11px;color:var(--r);font-weight:900}
+  .punch{margin-top:26px;text-align:center;font-size:19px;font-weight:900;color:var(--navy-deep)}
+  .punch .u{background:linear-gradient(transparent 62%,rgba(240,192,64,.55) 62%)}
+
+  /* 本当の理由 */
+  .reason p{font-size:15.5px;color:var(--ink);text-align:center;margin-bottom:14px}
+  .reason .big{font-size:19px;font-weight:900;color:var(--navy-deep)}
+  .reason .teal{color:var(--teal)}
+
+  /* 特典カード */
+  .gift{background:#fff;border:1px solid #ece6da;border-radius:16px;padding:22px;margin-top:16px;
+    box-shadow:0 6px 18px rgba(40,56,72,.05);transition:transform .15s ease,box-shadow .15s ease}
+  .gift:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(40,56,72,.1)}
+  .gift .tag{display:inline-block;font-weight:900;font-size:12px;color:#fff;background:var(--teal);
+    padding:4px 12px;border-radius:20px;margin-bottom:12px}
+  .gift h3{font-size:17px;font-weight:900;color:var(--navy-deep);line-height:1.5;margin-bottom:8px}
+  .gift p{font-size:14px;color:var(--ink-soft)}
+  .axis{margin-top:24px;text-align:center;font-size:15px;font-weight:700;color:var(--navy-deep)}
+  .axis b{color:var(--teal)}
+
+  /* プロフィール（dark） */
+  .profile{background:linear-gradient(165deg,var(--navy),var(--navy-deep));color:#fff}
+  .profile .label{color:var(--teal-light)}
+  .profile h2{color:#fff}
+  .profile .pic{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;
+    border:3px solid rgba(58,175,169,.5);background:rgba(255,255,255,.06);
+    display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:12px;text-align:center;overflow:hidden}
+  .profile .pic img{width:100%;height:100%;object-fit:cover}
+  .profile p{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:14px;text-align:left}
+  .profile .name{text-align:center;font-weight:900;font-size:17px;margin-bottom:18px}
+  .profile .name span{color:var(--teal-light);font-size:13px;font-weight:700}
+  .profile .closing{text-align:center;font-size:18px;font-weight:900;color:var(--gold)}
+
+  /* 証拠 */
+  .proof{background:var(--paper-2)}
+  .quote-card{max-width:440px;margin:18px auto 0;background:#fff;border:1px solid #ece6da;
+    border-radius:16px;padding:26px 22px;text-align:center;box-shadow:0 6px 18px rgba(40,56,72,.05)}
+  .quote-card .ba{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(28px,9vw,40px);color:var(--navy-deep);line-height:1.2}
+  .quote-card .ba .gold{color:var(--gold-deep)}
+  .quote-card .role{margin-top:6px;font-size:13px;color:var(--teal);font-weight:700}
+  .quote-card .voice{margin-top:16px;font-size:15px;color:var(--ink);font-weight:500}
+  .note{margin-top:14px;font-size:11px;color:var(--ink-soft);text-align:center}
+
+  /* ステップ */
+  .steps{list-style:none;max-width:420px;margin:22px auto 0}
+  .steps li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed #ddd5c7}
+  .steps li:last-child{border-bottom:none}
+  .steps .n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .steps .t{font-size:14.5px;color:var(--ink);padding-top:4px}
+
+  /* final CTA */
+  .final{background:linear-gradient(165deg,var(--navy-deep),var(--navy-darker));color:#fff;text-align:center}
+  .final h2{color:#fff}
+  .final p{margin-top:16px;color:rgba(255,255,255,.82);font-size:15px}
+
+  /* footer */
+  footer{background:var(--navy-darker);color:rgba(255,255,255,.55);text-align:center;
+    padding:30px 26px 110px;font-size:12px;line-height:2}
+  footer a{color:var(--teal-light);text-decoration:none}
+
+  /* sticky mobile CTA（不要なら削除OK） */
+  .sticky{position:fixed;bottom:0;left:0;width:100%;padding:10px 16px;
+    background:rgba(21,33,44,.92);backdrop-filter:blur(8px);z-index:50;
+    box-shadow:0 -6px 20px rgba(0,0,0,.25)}
+  .sticky a{display:block;max-width:var(--maxw);margin:0 auto;
+    background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#23303b;
+    text-align:center;text-decoration:none;font-weight:900;font-size:16px;padding:14px;border-radius:12px}
+
+  /* 入場アニメ */
+  .reveal{opacity:0;transform:translateY(16px);animation:rise .7s ease forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.32s}.d4{animation-delay:.46s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ① ファーストビュー -->
+  <header class="hero">
+    <div class="dots reveal d1"><i></i><i></i><i></i><i></i></div>
+    <h1 class="reveal d1">売り込まないのに、<span class="gold">売れる。</span></h1>
+    <p class="sub reveal d2">営業未経験でも、"自分の強み"で売れるようになる。<br>その第一歩を、無料の2点セットにしました。</p>
+    <div class="photo reveal d3"><img src="profile.jpg" alt="そうご"></div>
+    <a class="cta reveal d3" href="https://lin.ee/REPLACE_ME">📩 LINEで無料で受け取る<small>無料／3分でできる診断つき</small></a>
+    <p class="trust reveal d4">自己理解コーチ｜強み支援500人＋｜受講生は成約率10%→33%</p>
+  </header>
+
+  <!-- ② 共感 -->
+  <section class="light">
+    <div class="label">こんな悩み、ありませんか？</div>
+    <ul class="pains">
+      <li>営業本を何冊読んでも、成果が出ない</li>
+      <li>トークをマネしても、なんだか疲れるだけ</li>
+      <li>人によってアドバイスが正反対で、何が正解か分からない</li>
+      <li>「自分は営業に向いてないのかも」と思ってしまう</li>
+    </ul>
+    <p class="punch">それ、あなたの<span class="u">性格のせいでは、ありません。</span></p>
+  </section>
+
+  <!-- ③ 本当の理由 -->
+  <section class="light-2 reason">
+    <div class="label">本当の理由</div>
+    <p>売れないのは、才能でも気合でもなく、<br>「自分に合わない"型"」を頑張っているから。</p>
+    <p>内向的でも、口下手でも、売れている人はいます。<br>その人たちは、"自分の強みに合うやり方"を使っているだけ。</p>
+    <p class="big">大事なのは、他人の正解を探すことじゃない。<br><span class="teal">あなたに合う「型」を知ること</span>です。</p>
+  </section>
+
+  <!-- ④ 無料プレゼント -->
+  <section class="light">
+    <div class="label">無料プレゼント（2点セット）</div>
+    <h2>「あなたに合う型」を<br>見つける入口を、2つに。</h2>
+    <div class="gift">
+      <span class="tag">1つ目</span>
+      <h3>営業スタイル診断＋即効フレーズ集</h3>
+      <p>10問であなたの"勝ちパターン"（🟢🔵🔴🟡）が分かる。さらに、タイプ別に「明日の商談から使えるフレーズ」つき。</p>
+    </div>
+    <div class="gift">
+      <span class="tag">2つ目</span>
+      <h3>お客様を3分で見抜くチートシート</h3>
+      <p>お客様のタイプを見立てて、"その人に刺さる伝え方"が分かる。</p>
+    </div>
+    <p class="axis">自分の型 <b>×</b> 相手の型 ＝「売り込まないのに売れる」の両輪。</p>
+    <a class="cta" href="https://lin.ee/REPLACE_ME">📩 2点セットを無料で受け取る</a>
+  </section>
+
+  <!-- ⑤ プロフィール -->
+  <section class="profile">
+    <div class="label">誰が作ったの？</div>
+    <div class="pic"><img src="profile.jpg" alt="そうご"></div>
+    <p class="name">そうご<br><span>自分の型ch</span></p>
+    <p>自己理解コーチとして、500人以上の「強み」を一緒に見てきました。でも実は、自分自身が営業にすごく苦戦した時期があります。</p>
+    <p>クロージングを教わったとき「松岡修造を憑依させろ」と言われ、素直にやって惨敗。無理に演じる自分は、自分でもしんどかった。</p>
+    <p>転機は、"他人の正解"を手放して、自分の強みに合う型に変えたこと。そこから成約率は回復し、代理店営業の支援では2年連続で最高記録、自分でも平均成約率20%の商材で40%以上を継続できるようになりました。</p>
+    <p class="closing">営業は、あなたのままでいい。</p>
+  </section>
+
+  <!-- ⑥ 証拠 -->
+  <section class="proof">
+    <div class="label">受講生の変化</div>
+    <div class="quote-card">
+      <div class="ba">10% <span style="color:#b9c2cc">→</span> <span class="gold">33%</span></div>
+      <div class="role">営業未経験 → セールスマネージャー</div>
+      <div class="voice">「商談がやりやすくなって、<br>営業が楽しくなりました」</div>
+    </div>
+    <p class="note">※個人の成果であり、効果を保証するものではありません。</p>
+  </section>
+
+  <!-- ⑦ 受け取り方 -->
+  <section class="light-2">
+    <div class="label">受け取り方（カンタン3ステップ）</div>
+    <ul class="steps">
+      <li><span class="n">1</span><span class="t">下のボタンから公式LINEを友だち追加</span></li>
+      <li><span class="n">2</span><span class="t">2点セットがすぐ届きます</span></li>
+      <li><span class="n">3</span><span class="t">診断をやって、出たタイプをひと言返信（あなたに合わせた情報が届きます）</span></li>
+    </ul>
+  </section>
+
+  <!-- ⑧ 最後のひと押し -->
+  <section class="final">
+    <h2>「自己流のまま時間だけが過ぎる」<br>のが、一番もったいない。</h2>
+    <p>まずは無料で、"あなたの勝ちパターン"を<br>知ることから始めませんか。</p>
+    <a class="cta" href="https://lin.ee/REPLACE_ME">📩 LINEで無料で受け取る<small>無料／3分でできる診断つき／登録後すぐ届きます</small></a>
+  </section>
+
+  <!-- ⑨ フッター -->
+  <footer>
+    運営者：（氏名 or 屋号）／お問い合わせ先<br>
+    <a href="#">プライバシーポリシー</a><br>
+    自分の型ch
+  </footer>
+
+</div>
+
+<!-- スマホ固定CTA（不要なら削除OK） -->
+<div class="sticky"><a href="https://lin.ee/REPLACE_ME">📩 無料で受け取る</a></div>
+
+</body>
+</html>
