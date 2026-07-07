@@ -7,13 +7,10 @@
 <meta name="description" content="自己理解と強みを起点に、営業・独自ポジションづくり・集客を支援。あなたが"あなたのまま"で成果を出せるように伴走します。">
 
 <!-- ============================================================
-  ▼ 差し替え箇所
-  1) 無料相談ボタン → href="https://timerex.example/REPLACE"（TimeRex予約URL）
-  2) ストレングスセールス「詳しく見る」→ href="https://lp.example/REPLACE"（LP）
-  3) 写真 → .photo / .pic 内「写真をここに」を <img> に
-  4) 運営者・連絡先・ポリシー → フッター
+  v3.1（2026-07-07）：無料相談（TimeRex予約）フローを廃止。
+  代わりに、LPのある事業は詳細LPへ、それ以外はメール問い合わせへ誘導。
+  写真・運営者・連絡先・プライバシーポリシーは設定済み。
   ※ X / note / YouTube / LINE は実URL設定済み。Instagramは準備中。
-  ※ v3：配色をダークネイビー＋アイスブルー＋ゴールドに変更。
 ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,7 +155,7 @@
   <!-- ヘッダー -->
   <div class="hd">
     <div class="logo">そうご<span>｜自分の型ch</span></div>
-    <a class="mini" href="https://timerex.example/REPLACE">無料相談</a>
+    <a class="mini" href="mailto:sougo.biz@gmail.com">お問い合わせ</a>
   </div>
 
   <!-- ① ヒーロー -->
@@ -167,7 +164,7 @@
     <h1 class="reveal d1">"自分の強み"で、<br><span class="accent">替えのきかない自分</span>になる。</h1>
     <p class="sub reveal d2">自己理解を起点に、営業・独自ポジションづくり・集客を支援。<br>あなたが"あなたのまま"で成果を出せるように、伴走します。</p>
     <div class="photo reveal d3"><img src="profile.jpg" alt="そうご"></div>
-    <a class="cta reveal d3" href="https://timerex.example/REPLACE">無料相談を申し込む</a>
+    <a class="cta reveal d3" href="mailto:sougo.biz@gmail.com">お問い合わせする</a>
   </header>
 
   <!-- ② 想い・軸 -->
@@ -189,7 +186,6 @@
       <p>あなたの強みに合った"売り込まない"営業の型を、3ヶ月の1on1で一緒に作ります。</p>
       <div class="acts">
         <a class="b1" href="lp.html">詳しく見る</a>
-        <a class="b2" href="https://timerex.example/REPLACE">無料相談</a>
       </div>
     </div>
 
@@ -197,14 +193,14 @@
       <h3>独自ポジション・プロデュース</h3>
       <div class="who">「替えのきかない存在になりたい」／自分が何者かに不安がある人へ</div>
       <p>あなたにしかない強み・経験・価値観を編集し、唯一無二のポジションを一緒に設計します。</p>
-      <div class="acts"><a class="b2" href="https://timerex.example/REPLACE">無料相談</a></div>
+      <div class="acts"><a class="b2" href="mailto:sougo.biz@gmail.com">お問い合わせ</a></div>
     </div>
 
     <div class="svc">
       <h3>LP制作代行（仮称）</h3>
       <div class="who">いい商品はあるのに、集客や伝え方で止まっている人へ</div>
       <p>あなたの商品の価値が伝わるLPを、強みや想いごと言語化して形にします。</p>
-      <div class="acts"><a class="b2" href="https://timerex.example/REPLACE">無料相談</a></div>
+      <div class="acts"><a class="b2" href="mailto:sougo.biz@gmail.com">お問い合わせ</a></div>
     </div>
   </section>
 
@@ -232,11 +228,11 @@
     </div>
   </section>
 
-  <!-- ⑥ 無料相談CTA -->
+  <!-- ⑥ お問い合わせCTA -->
   <section class="final">
     <h2>まずは、話してみませんか。</h2>
     <p>どのサービスが合うか分からなくても大丈夫。<br>あなたの今に合わせて、一緒に考えます。</p>
-    <a class="cta" href="https://timerex.example/REPLACE">無料相談を申し込む<small>オンライン・60分／売り込みはしません</small></a>
+    <a class="cta" href="mailto:sougo.biz@gmail.com">お問い合わせする<small>内容に合わせて個別にご案内します／売り込みはしません</small></a>
   </section>
 
   <!-- ⑦ お問い合わせ -->
@@ -244,7 +240,7 @@
     <div class="label">お問い合わせ</div>
     <p class="lead">ご相談・お仕事のご依頼はこちらから。</p>
     <div class="row">
-      <a href="mailto:REPLACE@example.com">メールで問い合わせ</a>
+      <a href="mailto:sougo.biz@gmail.com">メールで問い合わせ</a>
       <a href="https://s.lmes.jp/landing-qr/2009973869-ZmAFu08m?uLand=cNVtUl" target="_blank" rel="noopener">公式LINEで問い合わせ</a>
     </div>
   </section>
@@ -252,8 +248,8 @@
   <!-- フッター -->
   <footer>
     そうご｜自分の型ch<br>
-    運営者：（氏名 or 屋号）／連絡先：（　）<br>
-    <a href="#">プライバシーポリシー</a>｜<a href="#">特定商取引法に基づく表記</a>
+    運営者：合同会社GenGoka／連絡先：sougo.biz@gmail.com<br>
+    <a href="privacy.html">プライバシーポリシー</a>｜<a href="tokushoho.html">特定商取引法に基づく表記</a>
   </footer>
 
 </div>
