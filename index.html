@@ -32,13 +32,22 @@
     --sage:#4FC3F7;          /* アイスブルー（副・明るめ） */
     --line:#28345A;          /* やわらかい境界（濃紺） */
     --g:#5FC98D; --b:#4FC3F7; --r:#F27878; --y:#F0C869; /* 4色 */
+    --card:#FBFDFF;          /* カード上部（白抜き） */
+    --card-2:#E7EFF9;        /* カード下部（淡い青みの白） */
+    --card-flag:#FDF6E6;     /* おすすめカード上部（淡いゴールド） */
+    --card-flag-2:#F5E7C8;   /* おすすめカード下部 */
+    --card-line:#D7E1EF;     /* カードの境界 */
+    --card-ink:#1B2A44;      /* カード内の濃紺文字 */
+    --card-ink-soft:#5B6B85; /* カード内の補助文字 */
+    --accent-on-light:#8A6215; /* 白カード上のゴールド文字（可読性確保） */
     --maxw:600px;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);
+    background:linear-gradient(180deg,#0B1326,#131F3D 45%,#0B1326);
     line-height:1.9;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:var(--maxw);margin:0 auto;background:var(--paper);overflow:hidden;
+  .wrap{max-width:var(--maxw);margin:0 auto;background:linear-gradient(180deg,var(--paper),var(--bg));overflow:hidden;
     box-shadow:0 0 60px rgba(0,0,0,.5)}
   .en{font-family:'Bricolage Grotesque',sans-serif}
   a{color:inherit}
@@ -82,35 +91,36 @@
 
   /* sections */
   section{padding:52px 26px}
-  .light{background:var(--paper)} .light-2{background:var(--paper-2)}
+  .light{background:linear-gradient(160deg,var(--paper),var(--soft))}
+  .light-2{background:linear-gradient(160deg,var(--paper-2),var(--paper))}
   .label{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:.18em;font-size:12px;
     color:var(--sage);text-transform:uppercase;margin-bottom:14px;text-align:center}
   h2{font-size:clamp(20px,5.2vw,24px);font-weight:900;line-height:1.6;text-align:center;color:var(--ink)}
   .lead{margin-top:16px;font-size:15px;color:var(--ink-soft);text-align:center}
 
   /* 想い */
-  .mission{background:var(--soft)}
+  .mission{background:linear-gradient(160deg,var(--soft),#142038)}
   .mission p{font-size:15px;color:var(--ink);text-align:center;margin-bottom:14px}
   .mission .big{font-size:18px;font-weight:900}
   .mission .u{background:linear-gradient(transparent 62%,rgba(240,200,105,.32) 62%)}
 
-  /* services */
-  .svc{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:16px;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .15s,box-shadow .15s}
-  .svc:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
-  .svc.flag{border-color:var(--accent);background:var(--soft-accent)}
-  .svc h3{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  /* services（白抜きカードで背景から浮かせる） */
+  .svc{background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--card-line);border-radius:16px;padding:22px;margin-top:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .15s,box-shadow .15s}
+  .svc:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.36)}
+  .svc.flag{border-color:var(--accent-deep);background:linear-gradient(160deg,var(--card-flag),var(--card-flag-2))}
+  .svc h3{font-size:18px;font-weight:900;color:var(--card-ink);margin-bottom:6px;display:flex;align-items:center;gap:8px}
   .svc h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sage)}
-  .svc.flag h3::before{background:var(--accent)}
-  .svc .who{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:8px}
-  .svc p{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+  .svc.flag h3::before{background:var(--accent-deep)}
+  .svc .who{font-size:13px;color:var(--accent-on-light);font-weight:700;margin-bottom:8px}
+  .svc p{font-size:14px;color:var(--card-ink-soft);margin-bottom:14px}
   .svc .acts{display:flex;flex-wrap:wrap;gap:10px}
-  .svc .b1{background:transparent;color:var(--accent);border:1.5px solid var(--accent);
+  .svc .b1{background:transparent;color:var(--accent-on-light);border:1.5px solid var(--accent-on-light);
     text-decoration:none;font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:10px}
   .svc .b2{background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:var(--paper);text-decoration:none;font-weight:800;font-size:13.5px;padding:10px 16px;border-radius:10px}
 
   /* profile（やわらかい面に） */
-  .profile{background:var(--soft)}
+  .profile{background:linear-gradient(160deg,var(--soft),#101B34)}
   .profile .label{color:var(--sage)}
   .pic{width:96px;height:96px;border-radius:50%;margin:0 auto 16px;border:3px solid var(--sage);
     background:var(--paper-2);box-shadow:0 0 18px rgba(79,195,247,.3);
@@ -121,26 +131,28 @@
   .profile p{font-size:14.5px;color:var(--ink);margin-bottom:15px}
   .profile .punch{text-align:center;font-weight:900;font-size:16px;color:var(--accent);margin-top:6px}
 
-  /* sns */
+  /* sns（白抜きカード） */
   .sns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
-  .sns a{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);
-    border-radius:12px;padding:12px 18px;text-decoration:none;font-weight:700;font-size:14px;color:var(--ink);
-    transition:transform .12s,border-color .12s}
-  .sns a:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .sns a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--card-line);
+    border-radius:12px;padding:12px 18px;text-decoration:none;font-weight:700;font-size:14px;color:var(--card-ink);
+    box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .12s,border-color .12s}
+  .sns a:hover{transform:translateY(-2px);border-color:var(--accent-deep)}
   .sns a.line{background:#06C755;color:#fff;border-color:#06C755}
-  .sns .soon{opacity:.5;background:var(--paper);cursor:default}
+  .sns .soon{opacity:.6;background:#DCE3ED;color:var(--card-ink-soft);cursor:default;box-shadow:none}
   .dot{width:9px;height:9px;border-radius:50%;background:var(--sage)}
 
-  /* final（ゴールド寄りのネイビー面に） */
-  .final{background:var(--soft-accent);text-align:center}
+  /* final（ゴールドの光を添えたネイビー面） */
+  .final{background:radial-gradient(120% 140% at 50% 0%,rgba(240,200,105,.16),transparent 60%),
+      linear-gradient(160deg,var(--soft-accent),#182545);text-align:center}
   .final h2{color:var(--ink)} .final p{margin-top:14px;color:var(--ink-soft);font-size:14.5px}
 
-  /* contact */
+  /* contact（白抜きカード） */
   .contact{text-align:center}
   .contact .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
-  .contact .row a{text-decoration:none;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;border:1px solid var(--line);color:var(--ink);background:var(--paper-2)}
+  .contact .row a{text-decoration:none;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;border:1px solid var(--card-line);color:var(--card-ink);
+    background:linear-gradient(160deg,var(--card),var(--card-2));box-shadow:0 4px 12px rgba(0,0,0,.22)}
 
-  footer{background:var(--soft);color:var(--ink-soft);text-align:center;padding:30px 26px 36px;font-size:12px;line-height:2;border-top:1px solid var(--line)}
+  footer{background:linear-gradient(180deg,var(--soft),var(--bg));color:var(--ink-soft);text-align:center;padding:30px 26px 36px;font-size:12px;line-height:2;border-top:1px solid var(--line)}
   footer a{color:var(--accent);text-decoration:none}
 
   .reveal{opacity:0;transform:translateY(16px);animation:rise .7s ease forwards}
