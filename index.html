@@ -10,7 +10,7 @@
   v3.1（2026-07-07）：無料相談（TimeRex予約）フローを廃止。
   代わりに、LPのある事業は詳細LPへ、それ以外はメール問い合わせへ誘導。
   写真・運営者・連絡先・プライバシーポリシーは設定済み。
-  ※ X / note / YouTube / LINE は実URL設定済み。Instagramは準備中。
+  ※ X / note / YouTube / LINE / Instagram すべて実URL設定済み。
 ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,6 @@
     --g:#5FC98D; --b:#4FC3F7; --r:#F27878; --y:#F0C869; /* 4色 */
     --card:#FBFDFF;          /* カード上部（白抜き） */
     --card-2:#E7EFF9;        /* カード下部（淡い青みの白） */
-    --card-flag:#FDF6E6;     /* おすすめカード上部（淡いゴールド） */
-    --card-flag-2:#F5E7C8;   /* おすすめカード下部 */
     --card-line:#D7E1EF;     /* カードの境界 */
     --card-ink:#1B2A44;      /* カード内の濃紺文字 */
     --card-ink-soft:#5B6B85; /* カード内の補助文字 */
@@ -87,7 +85,7 @@
     text-decoration:none;text-align:center;font-weight:800;font-size:16.5px;padding:16px 20px;border-radius:14px;
     box-shadow:0 8px 20px rgba(240,200,105,.22);transition:transform .15s,box-shadow .15s}
   .cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(240,200,105,.32)}
-  .cta small{display:block;font-weight:600;font-size:11.5px;color:rgba(22,33,63,.75);margin-top:3px}
+  .cta small{display:block;font-weight:600;font-size:12px;color:rgba(22,33,63,.75);margin-top:3px}
 
   /* sections */
   section{padding:52px 26px}
@@ -104,14 +102,12 @@
   .mission .big{font-size:18px;font-weight:900}
   .mission .u{background:linear-gradient(transparent 62%,rgba(240,200,105,.32) 62%)}
 
-  /* services（白抜きカードで背景から浮かせる） */
+  /* services（白抜きカードで背景から浮かせる。3枚とも同じ色） */
   .svc{background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--card-line);border-radius:16px;padding:22px;margin-top:16px;
     box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .15s,box-shadow .15s}
   .svc:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.36)}
-  .svc.flag{border-color:var(--accent-deep);background:linear-gradient(160deg,var(--card-flag),var(--card-flag-2))}
   .svc h3{font-size:18px;font-weight:900;color:var(--card-ink);margin-bottom:6px;display:flex;align-items:center;gap:8px}
   .svc h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sage)}
-  .svc.flag h3::before{background:var(--accent-deep)}
   .svc .who{font-size:13px;color:var(--accent-on-light);font-weight:700;margin-bottom:8px}
   .svc p{font-size:14px;color:var(--card-ink-soft);margin-bottom:14px}
   .svc .acts{display:flex;flex-wrap:wrap;gap:10px}
@@ -131,15 +127,13 @@
   .profile p{font-size:14.5px;color:var(--ink);margin-bottom:15px}
   .profile .punch{text-align:center;font-weight:900;font-size:16px;color:var(--accent);margin-top:6px}
 
-  /* sns（白抜きカード） */
+  /* sns（白抜きカードで統一。アイコンはそれぞれのブランドカラー） */
   .sns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
-  .sns a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--card-line);
-    border-radius:12px;padding:12px 18px;text-decoration:none;font-weight:700;font-size:14px;color:var(--card-ink);
+  .sns a{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(160deg,var(--card),var(--card-2));border:1px solid var(--card-line);
+    border-radius:12px;padding:10px 18px 10px 12px;text-decoration:none;font-weight:700;font-size:14px;color:var(--card-ink);
     box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .12s,border-color .12s}
   .sns a:hover{transform:translateY(-2px);border-color:var(--accent-deep)}
-  .sns a.line{background:#06C755;color:#fff;border-color:#06C755}
-  .sns .soon{opacity:.6;background:#DCE3ED;color:var(--card-ink-soft);cursor:default;box-shadow:none}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--sage)}
+  .sns svg{width:22px;height:22px;flex:0 0 auto;display:block}
 
   /* final（ゴールドの光を添えたネイビー面） */
   .final{background:radial-gradient(120% 140% at 50% 0%,rgba(240,200,105,.16),transparent 60%),
@@ -192,7 +186,7 @@
     <div class="label">サービス</div>
     <h2>3つの入り口から、<br>あなたの「自分の型」をつくる。</h2>
 
-    <div class="svc flag">
+    <div class="svc">
       <h3>ストレングスセールス</h3>
       <div class="who">営業未経験〜駆け出しで、成果が出ずに悩んでいる人へ</div>
       <p>あなたの強みに合った"売り込まない"営業の型を、3ヶ月の1on1で一緒に作ります。</p>
@@ -232,11 +226,35 @@
     <div class="label">発信</div>
     <h2>考え方や実践は、<br>SNSでも届けています。</h2>
     <div class="sns">
-      <a href="https://x.com/Gengoka_sougo" target="_blank" rel="noopener"><span class="dot"></span>X</a>
-      <a href="https://note.com/gifted_potential" target="_blank" rel="noopener"><span class="dot"></span>note</a>
-      <a href="https://www.youtube.com/@jibun-no-kata" target="_blank" rel="noopener"><span class="dot"></span>YouTube</a>
-      <a class="line" href="https://s.lmes.jp/landing-qr/2009973869-ZmAFu08m?uLand=cNVtUl" target="_blank" rel="noopener">公式LINEを追加</a>
-      <a class="soon">Instagram（準備中）</a>
+      <a href="https://x.com/Gengoka_sougo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111827"/><path d="M7 7l10 10M17 7L7 17" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        X
+      </a>
+      <a href="https://note.com/gifted_potential" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111827"/><text x="12" y="17" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="14" fill="#fff">n</text></svg>
+        note
+      </a>
+      <a href="https://www.youtube.com/@jibun-no-kata" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#FF0000"/><path d="M10 8l6 4-6 4V8z" fill="#fff"/></svg>
+        YouTube
+      </a>
+      <a href="https://s.lmes.jp/landing-qr/2009973869-ZmAFu08m?uLand=cNVtUl" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="8" fill="#06C755"/><path d="M12 6c-3.9 0-7 2.5-7 5.6 0 2.7 2.4 5 5.7 5.5-.1.4-.5 1.7-.6 2 0 .3.2.3.4.2.2-.1 2.6-1.7 3.6-2.4 3.1-.4 5.5-2.7 5.5-5.3C19.6 8.5 16.5 6 12 6z" fill="#fff"/></svg>
+        公式LINEを追加
+      </a>
+      <a href="https://www.instagram.com/sougo_gengoka/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="igGrad" x1="0" y1="24" x2="24" y2="0">
+            <stop offset="0" stop-color="#FEC053"/><stop offset=".35" stop-color="#F2506A"/>
+            <stop offset=".7" stop-color="#C23AC3"/><stop offset="1" stop-color="#7C4FE0"/>
+          </linearGradient></defs>
+          <rect width="24" height="24" rx="7" fill="url(#igGrad)"/>
+          <rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.6"/>
+          <circle cx="15.6" cy="8.4" r="1" fill="#fff"/>
+        </svg>
+        Instagram
+      </a>
     </div>
   </section>
 
