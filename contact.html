@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜自分の型ch</title>
+<meta name="description" content="ご相談・お仕事のご依頼はこちらのフォームからお願いします。">
+
+<!-- ============================================================
+  Web3Forms のアクセスキーを ACCESS_KEY_PLACEHOLDER の箇所に設定してください。
+  取得方法：https://web3forms.com/ でメールアドレスを入力して発行。
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0E1830; --paper:#16213F; --paper-2:#1C2A4A; --soft:#1A2747;
+    --ink:#EAF1FB; --ink-soft:#93A6C2;
+    --accent:#F0C869; --accent-deep:#D9A853; --sage:#4FC3F7; --line:#28345A;
+    --card:#FBFDFF; --card-2:#E7EFF9; --card-line:#D7E1EF;
+    --card-ink:#1B2A44; --card-ink-soft:#5B6B85;
+    --maxw:600px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);
+    background:linear-gradient(180deg,#0B1326,#131F3D 45%,#0B1326);
+    line-height:1.9;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;background:linear-gradient(180deg,var(--paper),var(--bg));overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,.5)}
+  a{color:var(--accent)}
+
+  .hd{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 18px;background:rgba(14,24,48,.85);backdrop-filter:blur(8px);color:var(--ink);
+    border-bottom:1px solid var(--line)}
+  .hd .logo{font-weight:900;font-size:15px}
+  .hd .logo span{color:var(--sage);font-size:12px;font-weight:700}
+  .hd .back{color:var(--sage);text-decoration:none;font-size:13px;font-weight:700}
+
+  section{padding:48px 26px 60px}
+  .label{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:.18em;font-size:12px;
+    color:var(--sage);text-transform:uppercase;margin-bottom:14px;text-align:center}
+  h1{font-size:clamp(21px,5.5vw,25px);font-weight:900;line-height:1.6;text-align:center;color:var(--ink)}
+  .lead{margin-top:14px;font-size:14px;color:var(--ink-soft);text-align:center}
+
+  form{margin-top:28px;background:linear-gradient(160deg,var(--card),var(--card-2));
+    border:1px solid var(--card-line);border-radius:16px;padding:26px 22px;
+    box-shadow:0 6px 18px rgba(0,0,0,.28)}
+  .field{margin-bottom:18px}
+  label{display:block;font-size:13px;font-weight:700;color:var(--card-ink);margin-bottom:6px}
+  input,select,textarea{width:100%;font-family:inherit;font-size:14px;color:var(--card-ink);
+    background:#fff;border:1px solid var(--card-line);border-radius:10px;padding:11px 13px}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--sage);outline-offset:1px}
+  textarea{resize:vertical;min-height:120px}
+  .req{color:#C0392B;font-weight:700}
+
+  .submit{display:block;width:100%;margin-top:6px;
+    background:linear-gradient(180deg,var(--accent),var(--accent-deep));color:var(--paper);
+    border:none;text-align:center;font-weight:800;font-size:16px;padding:15px 20px;border-radius:14px;
+    cursor:pointer;transition:transform .15s,box-shadow .15s;
+    box-shadow:0 8px 20px rgba(240,200,105,.22)}
+  .submit:hover{transform:translateY(-2px)}
+  .submit:disabled{opacity:.6;cursor:default;transform:none}
+
+  .msg{margin-top:16px;border-radius:12px;padding:14px 16px;font-size:14px;display:none}
+  .msg.show{display:block}
+  .msg.ok{background:rgba(95,201,141,.14);border:1px solid #5FC98D;color:var(--ink)}
+  .msg.err{background:rgba(242,120,120,.14);border:1px solid #F27878;color:var(--ink)}
+
+  .alt{margin-top:24px;text-align:center;font-size:13px;color:var(--ink-soft)}
+  .alt a{color:var(--accent)}
+
+  footer{background:linear-gradient(180deg,var(--soft),var(--bg));color:var(--ink-soft);text-align:center;
+    padding:30px 26px 36px;font-size:12px;line-height:2;border-top:1px solid var(--line)}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hd">
+    <div class="logo">そうご<span>｜自分の型ch</span></div>
+    <a class="back" href="index.html">← トップに戻る</a>
+  </div>
+
+  <section>
+    <div class="label">お問い合わせ</div>
+    <h1>ご相談・お仕事のご依頼は<br>こちらのフォームからどうぞ。</h1>
+    <p class="lead">内容を確認のうえ、メールにてご返信いたします。</p>
+
+    <form id="contactForm">
+      <input type="hidden" name="access_key" value="ACCESS_KEY_PLACEHOLDER">
+      <input type="hidden" name="subject" value="【自分の型ch】お問い合わせフォームより">
+      <input type="hidden" name="from_name" value="自分の型ch お問い合わせフォーム">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+      <div class="field">
+        <label for="name">お名前 <span class="req">必須</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">メールアドレス <span class="req">必須</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="service">ご関心のあるサービス</label>
+        <select id="service" name="service">
+          <option value="未選択">選択してください（任意）</option>
+          <option value="ストレングスセールス">ストレングスセールス</option>
+          <option value="独自ポジション・プロデュース">独自ポジション・プロデュース</option>
+          <option value="LP制作代行">LP制作代行</option>
+          <option value="その他・わからない">その他・わからない</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">お問い合わせ内容 <span class="req">必須</span></label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="submit" id="submitBtn">送信する</button>
+      <div class="msg ok" id="okMsg">送信しました。ありがとうございます。内容を確認のうえ、ご入力いただいたメールアドレスへご返信します。</div>
+      <div class="msg err" id="errMsg">送信に失敗しました。お手数ですが、下記メールアドレスまで直接ご連絡ください。</div>
+    </form>
+
+    <p class="alt">フォームが使えない場合は <a href="mailto:sougo.biz@gmail.com">sougo.biz@gmail.com</a> へ直接ご連絡ください。</p>
+  </section>
+
+  <footer>
+    そうご｜自分の型ch<br>
+    運営者：合同会社GenGoka／連絡先：sougo.biz@gmail.com<br>
+    <a href="privacy.html">プライバシーポリシー</a>｜<a href="tokushoho.html">特定商取引法に基づく表記</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('submitBtn');
+  var ok = document.getElementById('okMsg');
+  var err = document.getElementById('errMsg');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    ok.classList.remove('show');
+    err.classList.remove('show');
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      btn.disabled = false;
+      btn.textContent = '送信する';
+      if (data.success) {
+        form.reset();
+        ok.classList.add('show');
+      } else {
+        err.classList.add('show');
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = '送信する';
+      err.classList.add('show');
+    });
+  });
+})();
+</script>
+</body>
+</html>
